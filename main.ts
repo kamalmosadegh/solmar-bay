@@ -1,12 +1,12 @@
-// Solmar Bay — the entry program (Node 22+, standard library only).
+// Solmar Bay — the packaging program (Node 22+, standard library only).
 //
 // The game is plain static files under game/: index.html plus its ES modules,
 // no build step and no network request, so any static server can host it.
-// This program hands the entry in: it copies game/ and screenshots/ from
+// This program packages the game: it copies game/ and screenshots/ from
 // beside this file into the output directory and writes dossier.json there,
-// the summary the judge reads, built by the vendored make.fun library.
+// a machine-readable summary of the package.
 //
-// Run it outside the grader with:
+// Run it locally with:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 // Inside the grader MAKEFUN_OUTPUT_DIR is unset and /output is used.
 // Serve the game locally with `node serve.ts` (http://localhost:8080).
